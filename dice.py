@@ -1,10 +1,11 @@
 # dice.py file
 import random
 
-def dice_roll(sides):
+def dice_roll():
+    sides = int(input('Input the number of sides on your die: '))
     roll = random.randint(1, sides)
     print('You rolled a', roll)   
     roll_again = str(input('Would you like to roll again? Please enter Y or N to continue: '))
     while roll_again == 'Y' or roll_again == 'y' or roll_again == 'yes'  or roll_again == 'YES':
-        return dice_roll(sides)
+        return dice_roll()
     print('Thanks for playing!')
